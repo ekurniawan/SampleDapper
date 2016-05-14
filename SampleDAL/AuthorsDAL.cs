@@ -18,6 +18,7 @@ namespace SampleDAL
             return ConfigurationManager.ConnectionStrings["CommerceConnectionString"].ConnectionString;
         }
 
+        //ini untuk ambil semua data author
         public IEnumerable<Author> GetAllAuthor()
         {
             using (SqlConnection conn = new SqlConnection(GetConnection()))
