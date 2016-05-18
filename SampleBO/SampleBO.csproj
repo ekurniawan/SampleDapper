@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2746BC1E-2A65-4523-B598-F4257A7D4FFC}</ProjectGuid>
+    <ProjectGuid>{2A7EE314-81B2-4970-BDF0-61EA4AB122DC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SampleDAL</RootNamespace>
-    <AssemblyName>SampleDAL</AssemblyName>
+    <RootNamespace>SampleBO</RootNamespace>
+    <AssemblyName>SampleBO</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -34,17 +34,12 @@
       <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Dapper.FastCrud.Net46, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dapper.FastCrud.2.3.2\lib\net46\Dapper.FastCrud.Net46.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Dapper.FluentMap, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.FluentMap.1.4.1\lib\net40\Dapper.FluentMap.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,23 +49,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BooksDAL.cs" />
-    <Compile Include="CategoriesDAL.cs" />
-    <Compile Include="PengarangDAL.cs" />
+    <Compile Include="Book.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="Mapping\PengarangMap.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderDetail.cs" />
+    <Compile Include="Pengarang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Review.cs" />
+    <Compile Include="ShoppingCart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SampleBO\SampleBO.csproj">
-      <Project>{2a7ee314-81b2-4970-bdf0-61ea4ab122dc}</Project>
-      <Name>SampleBO</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
