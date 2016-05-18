@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 using System.Data.SqlClient;
 using Dapper;
-using Dapper.FastCrud;
 using SampleBO;
 using SampleBO.Mapping;
 using System.Configuration;

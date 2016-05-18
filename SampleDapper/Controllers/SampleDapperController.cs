@@ -27,12 +27,13 @@ namespace SampleDapper.Controllers
             return Json(results, JsonRequestBehavior.AllowGet);
         }
 
+        
         public JsonResult GetBooks()
         {
             using (BooksDAL service = new BooksDAL())
             {
                 //no join
-                var results = service.GetAll();
+                //var results = service.GetAll();
 
                 //with pengarang
                 //var results = service.GetAll(false,true);
@@ -41,7 +42,7 @@ namespace SampleDapper.Controllers
                 //var results = service.GetAll(false, false, true);
 
                 //with both
-                //var results = service.GetAll(true);
+                var results = service.GetAll(true);
 
                 return Json(results, JsonRequestBehavior.AllowGet);
             }

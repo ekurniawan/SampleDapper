@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.SqlClient;
 using Dapper;
-using Dapper.FastCrud;
 using SampleBO;
 using SampleBO.Mapping;
 using Dapper.FluentMap;
@@ -53,7 +52,8 @@ namespace SampleDAL
         }*/
 
 
-        public IEnumerable<Book> GetAll(bool withAll=false, bool withPengarang = false, bool withCategory = false)
+        public IEnumerable<Book> GetAll(bool withAll=false, 
+            bool withPengarang = false, bool withCategory = false)
         {
             string strSql = string.Empty;
             IEnumerable<Book> books = null;

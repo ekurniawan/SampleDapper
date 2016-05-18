@@ -30,6 +30,7 @@ namespace SampleBO
 
         public Pengarang Pengarang { get; set; }
         public Category Category { get; set; }
+
         public ICollection<OrderDetail> OrderDetails { get; set; }
         public ICollection<Review> Reviews { get; set; }
         public ICollection<ShoppingCart> ShoppingCarts { get; set; }
